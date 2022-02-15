@@ -1,0 +1,30 @@
+basePath: /api/example
+definitions:
+  handlers.Health:
+    properties:
+      message:
+        type: string
+    type: object
+info:
+  contact: {}
+  description: show echo capabilities
+  title: API Example
+  version: "1.0"
+paths:
+  /health:
+    get:
+      description: health service
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/handlers.Health'
+      summary: Check if service is available
+      tags:
+      - Health
+schemes:
+- http
+- https
+swagger: "2.0"
