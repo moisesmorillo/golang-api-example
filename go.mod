@@ -1,4 +1,4 @@
-module golang-apli-example
+module github.com/moisesmorillo/golang-apli-example
 
 go 1.16
 
