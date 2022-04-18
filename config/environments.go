@@ -10,6 +10,11 @@ import (
 type Environment struct {
 	ServerHost string `required:"true" split_words:"true"`
 	ServerPort int    `required:"true" split_words:"true"`
+	DbHost     string `required:"true" split_words:"true"`
+	DbPort     int    `required:"true" split_words:"true"`
+	DbUser     string `required:"true" split_words:"true"`
+	DbPassword string `required:"true" split_words:"true"`
+	DbName     string `required:"true" split_words:"true"`
 }
 
 var (

@@ -2,6 +2,7 @@ package enums
 
 const (
 	RouterGlobalPath      = "/api/example"
-	RouterHealthCheckPath = "/health"
+	RouterHealthCheckPath = "/health/"
 	RouterSwaggerPath     = "/swagger/*"
+	RouterUsersPath       = "/users/"
 )

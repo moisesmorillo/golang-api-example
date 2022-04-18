@@ -2,16 +2,19 @@ package main
 
 import (
 	"fmt"
+	"github.com/moisesmorillo/golang-api-example/config"
+	"github.com/moisesmorillo/golang-api-example/server"
+
+	_ "github.com/moisesmorillo/golang-api-example/docs"
 
 	"github.com/labstack/echo/v4"
-	"github.com/moisesmorillo/golang-apli-example/config"
-	_ "github.com/moisesmorillo/golang-apli-example/docs"
-	"github.com/moisesmorillo/golang-apli-example/server"
 )
 
 // @title API Example
 // @version 1.0
 // @description show echo capabilities
+
+// @license.name Platzi Live Class
 
 // @BasePath /api/example
 // @schemes http https

@@ -1,5 +1,12 @@
 basePath: /api/example
 definitions:
+  dtos.Users:
+    properties:
+      name:
+        type: string
+    required:
+    - name
+    type: object
   handlers.Health:
     properties:
       message:
@@ -8,10 +15,12 @@ definitions:
 info:
   contact: {}
   description: show echo capabilities
+  license:
+    name: Platzi Live Class
   title: API Example
   version: "1.0"
 paths:
-  /health:
+  /health/:
     get:
       description: health service
       produces:
@@ -24,6 +33,58 @@ paths:
       summary: Check if service is available
       tags:
       - Health
+  /users/:
+    get:
+      consumes:
+      - application/json
+      description: get all users with a limit of 10
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/dtos.Users'
+            type: array
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Get All Users
+      tags:
+      - Users
+    post:
+      consumes:
+      - application/json
+      description: Create user
+      parameters:
+      - description: Request body
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/dtos.Users'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+        "400":
+          description: Bad Request
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Create user
+      tags:
+      - Users
 schemes:
 - http
 - https

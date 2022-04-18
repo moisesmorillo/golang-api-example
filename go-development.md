@@ -1,5 +1,5 @@
  # Golang tools for developers
- * Web Framework https://github.com/labstack/echo (recommeded) https://github.com/gin-gonic/gin (alternative) 
+ * Web Framework https://github.com/labstack/echo (recommended) https://github.com/gin-gonic/gin (alternative) 
  * Environments mapper https://github.com/kelseyhightower/envconfig
  * Testing mocks https://github.com/vektra/mockery assert https://github.com/stretchr/testify
  * Array manipulation https://github.com/thoas/go-funk
